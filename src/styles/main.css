@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* Custom theme variables */
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  --font-family-sans: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --max-width-content: 900px;
+  --line-height-relaxed: 1.75;
+}
+
+/* Base styles */
+:root {
+  font-family: var(--font-family-sans);
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light theme (default) */
+:root, .light {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #fafafa;
+  --color-text: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-code-bg: #f3f4f6;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+
+  /* Sidebar & TOC Design Tokens */
+  --sidebar-indent-unit: 10px;
+  --sidebar-base-padding: 8px;
+  --sidebar-min-width: 180px;
+  --sidebar-max-width: 400px;
+  --sidebar-default-width: 240px;
+
+  /* Sidebar Typography Scale */
+  --sidebar-title-size: 0.85rem;
+  --sidebar-item-size: 0.8rem;
+  --sidebar-item-size-sm: 0.75rem;
+  --sidebar-icon-size: 0.9rem;
+  --sidebar-expand-icon-size: 0.55rem;
+}
+
+/* Dark theme */
+.dark {
+  --color-bg: #111827;
+  --color-bg-secondary: #1f2937;
+  --color-text: #f9fafb;
+  --color-text-secondary: #9ca3af;
+  --color-border: #374151;
+  --color-code-bg: #1f2937;
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
